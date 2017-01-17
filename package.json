@@ -1,0 +1,67 @@
+{
+  "name": "bespoke-theme-beachday",
+  "version": "1.0.0",
+  "description": "A cheerful theme for Bespoke.js inspired by a Google Presentations theme",
+  "homepage": "https://github.com/fegemo/bespoke-theme-beachday",
+  "bugs": "https://github.com/fegemo/bespoke-theme-beachday/issues",
+  "author": {
+    "email": "fegemo@gmail.com",
+    "name": "Flávio Coutinho",
+    "url": "https://github.com/fegemo"
+  },
+  "main": "./dist/bespoke-theme-beachday.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fegemo/bespoke-theme-beachday.git"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "peerDependencies": {
+    "bespoke": ">=1.0.0",
+    "bespoke-classes": "^1.0.0"
+  },
+  "devDependencies": {
+    "bespoke": "^1.1.0",
+    "bespoke-bullets": "^1.1.0",
+    "bespoke-hash": "^1.0.2",
+    "bespoke-keys": "^1.1.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-scale": "fegemo/bespoke-scale#use-current-slide",
+    "bespoke-simple-overview": "^1.0.0",
+    "bespoke-state": "^1.0.0",
+    "bespoke-touch": "^1.0.0",
+    "brfs": "^1.4.3",
+    "browserify": "^13.3.0",
+    "del": "^2.2.2",
+    "function-bind": "^1.1.0",
+    "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-header": "^1.8.8",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "insert-css": "^2.0.0",
+    "normalizecss": "^3.0.0",
+    "opn": "^4.0.2",
+    "through": "^2.3.8",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=7.3.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bespoke-plugin",
+    "bespoke-theme"
+  ]
+}

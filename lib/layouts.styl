@@ -1,0 +1,112 @@
+.layout-title.bespoke-slide
+  text-align center
+  display flex
+  justify-content space-around
+  h1
+    color $big-title-color
+  h2
+    background-color $accent-color
+    display block
+    width 100%
+    padding 2em 0
+    margin 1em 0 0
+    strong
+      color darken($accent-color, 50%)
+
+.layout-section-header.bespoke-slide
+  display flex
+  flex-direction column
+  flex-wrap wrap
+  &::before, &::after
+    content " "
+    position absolute
+    top 0
+    display block
+    width 50%
+    height 100%
+    z-index -1
+  &::before
+    left 0
+    background-color white
+  &::after
+    right 0
+    background-color $accent-color
+  .content
+    display block
+    box-sizing border-box
+    p, li, dd, dt
+      background-color white
+    p
+      display inline
+      &::after
+        content " "
+        display block
+        margin-bottom 0.5em
+    &::after
+      content " "
+      display block
+      width 3em
+      height 1px
+      border-bottom 3px solid white
+    li
+      display inline
+      &::before
+        content " "
+        display list-item
+        float left
+      &::after
+        content " "
+        display block
+  & > *
+    width 50%
+    padding 0 1em
+  & > ul, & > ol
+    padding-left 2em
+  h1, h2
+    margin 0
+    padding 0
+    text-align center
+  h1
+    height 70%
+    box-sizing border-box
+    padding-top 2em
+  h2
+    height 30%
+
+regular-slide()
+  display flex
+  justify-content flex-start
+  align-items flex-start
+  padding 2em
+
+.layout-regular.bespoke-slide
+  regular-slide()
+  h1, h2, h3, h4, h5, h6
+    margin 0
+    padding 0 0 0.5em
+  // *:not(h1):not(h2)
+  //   this is how to style anything but the titles
+
+.layout-2-column-content.bespoke-slide
+  regular-slide()
+  flex-wrap wrap
+  flex-direction row
+  h1, h2, h3, h4, h5, h6
+    flex-basis 100%
+  & > * + *
+    width 49%
+    margin-left 1%
+    margin-right 0
+    &::last-child
+      margin-left 0
+
+.layout-centered.bespoke-slide
+  display flex
+
+.layout-main-point
+  &.bespoke-slide
+    background-color $emphatic-color
+    h1, h2, h3, h4, h5, h6
+      color white
+  &.bespoke-parent
+    background-color $emphatic-color

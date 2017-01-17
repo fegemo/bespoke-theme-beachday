@@ -1,0 +1,44 @@
+$overview-slide-distance = 2000px
+$overview-slide-distance-active = 2000px
+$overview-slide-inactive-y-diff = 0
+$overview-slide-inactive-active-y-diff = 0
+$overview-space-between-slides = $overview-slide-distance / 83.333px
+
+@media screen
+  .bespoke-parent,
+  .bespoke-scale-parent
+    perspective 900px
+
+  .bespoke-simple-overview
+    .bespoke-slide
+      position absolute
+      opacity 1
+      outline 4px solid silver
+
+      &:hover
+        outline-color steelblue
+
+      &.bespoke-active
+        transform translate3d(0, $overview-slide-inactive-active-y-diff, - $overview-slide-distance-active)
+        outline-color steelblue
+        z-index 100
+
+      &.bespoke-after:not(.bespoke-after-1):not(.bespoke-after-2):not(.bespoke-after-3):not(.bespoke-after-4):not(.bespoke-after-5):not(.bespoke-after-6)
+        transform translate3d(7*($slide-width + $overview-space-between-slides), $overview-slide-inactive-y-diff, - $overview-slide-distance)
+      &.bespoke-before:not(.bespoke-before-1):not(.bespoke-before-2):not(.bespoke-before-3):not(.bespoke-before-4):not(.bespoke-before-5):not(.bespoke-before-6)
+        transform translate3d(7*($slide-width + $overview-space-between-slides)*(-1), $overview-slide-inactive-y-diff, - $overview-slide-distance)
+
+      for i in 1..6
+        &.bespoke-after-{i}
+          display flex
+          will-change transform
+          transform translate3d(i*($slide-width + $overview-space-between-slides), $overview-slide-inactive-y-diff, - $overview-slide-distance)
+        &.bespoke-before-{i}
+          display flex
+          will-change transform
+          transform translate3d(i*($slide-width + $overview-space-between-slides)*(-1), $overview-slide-inactive-y-diff, - $overview-slide-distance)
+
+    .bespoke-bullet-inactive
+      display list-item
+      opacity initial
+      transform initial

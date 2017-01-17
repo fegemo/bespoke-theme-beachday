@@ -1,0 +1,199 @@
+// pulling images left or right
+$image-margin-to-text = 20px
+img[alt$="right"]
+  float right
+img[alt$="left"]
+  float left
+.push-right
+  float right
+  margin-left $image-margin-to-text
+.push-left
+  float left
+  margin-right $image-margin-to-text
+
+
+// figures with overlapped images
+.figure-slides
+  position relative
+  width 100%
+  height 500px
+
+.figure-step
+  position absolute
+  top 0
+  left 0
+
+
+// bookmarklets (links looking like buttons)
+a.bookmarklet
+  border-radius 5px
+  border 2px solid silver
+  padding 4px 7px
+  background-color rgba(255,255,255,.1)
+  transition all 200ms ease-out
+  &:hover
+    text-decoration none
+    background-color #b66c7e
+    color #ddd
+    border-color #333
+    cursor move
+
+
+// switches (toggle buttons - on and off)
+input.switch:empty
+  display block
+  margin-left -999px
+
+
+input.switch:empty ~ label
+  position relative
+  float left
+  line-height 1.6em
+  text-indent 4em
+  margin 0.2em 0
+  cursor pointer
+  user-select none
+
+input.switch:empty ~ label:before,
+input.switch:empty ~ label:after
+  position absolute
+  display block
+  top 0
+  bottom 0
+  left 0
+  content ' '
+  width 3.6em
+  background-color #c33
+  border-radius 0.3em
+  box-shadow inset 0 0.2em 0 rgba(0,0,0,0.3)
+  transition all 100ms ease-in
+
+input.switch:empty ~ label:after
+  width 1.4em
+  top 0.1em
+  bottom 0.1em
+  margin-left 0.1em
+  background-color #fff
+  border-radius 0.15em
+  box-shadow inset 0 -0.2em 0 rgba(0,0,0,0.2)
+
+input.switch:checked ~ label:before
+  background-color #393
+
+input.switch:checked ~ label:after
+  margin-left 2.1em
+
+
+// images
+img
+  &.full-width
+    width 100%
+  &.large-width
+    width 80%
+  &.medium-width
+    width 60%
+  &.small-width
+    width 40%
+  &.full-height
+    height 100%
+  &.huge-height
+    height 80%
+  &.large-height
+    height 60%
+  &.medium-height
+    height 40%
+  &.small-height
+    height 20%
+  &.block
+    display block
+
+// image portraits
+$portrait-size = 150px
+.portrait,
+.portrait img
+  display inline-block
+  width $portrait-size
+  height $portrait-size
+  border-radius 50%
+  figcaption
+    background-color transparent
+
+.floating-portrait-container
+  position relative
+  *
+    margin 0
+    @extend .portrait
+    animation floating 2s ease-in-out 0s infinite alternate
+
+  &::after
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    left: 0;
+    right: 0;
+    bottom: -20%;
+    background: radial-gradient(ellipse closest-side, rgba(21, 21, 21, 0.25) 0%,rgba(255,255,255,0) 100%);
+    z-index: -1;
+    animation floated-element-shadow 2s ease-in-out 0s infinite alternate
+
+.flips
+  *
+    margin 0
+  transition transform 600ms ease-out
+  &:hover
+    transform rotateY(720deg)
+
+@keyframes floating
+  from
+    transform translateY(0)
+  to
+    transform translateY(-25%)
+
+@keyframes floated-element-shadow
+  from
+    transform scaleX(1.0)
+  to
+    transform scaleX(0.5)
+
+
+
+// general classes
+.center-aligned
+  text-align center
+
+.bullet-old
+  color gray
+
+// lists
+.horizontal-list
+  list-style none
+
+  &> li
+    display inline-block
+    width 25%
+    margin 0 4.5% 0 0
+    vertical-align middle
+    &:last-of-type
+      margin 0
+
+for num in (2..5)
+  .multi-column-list-{num}
+    padding-left 0
+    column-count num
+    list-style-position inside
+
+
+// splitting the content in columns
+for num in (2..5)
+  .layout-split-{num}
+    flex-direction row
+    display flex
+    justify-content center
+    align-items stretch
+    height 100%
+    width 100%
+    & > section
+      width 100%  * (1/num)
+      flex-grow 1
+      text-align center

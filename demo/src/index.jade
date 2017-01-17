@@ -1,0 +1,93 @@
+doctype html
+html
+  head
+    title bespoke-theme-beachday
+    meta(name='description', content='A cheerful theme for Bespoke.js inspired by a Google Presentations theme')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(charset='utf-8')
+    link(href='https://fonts.googleapis.com/css?family=Amatica+SC:700|Source+Code+Pro', rel='stylesheet')
+
+  body
+
+    article.transition-subtle(style="visibility: hidden")
+
+      section.layout-title
+        h1 bespoke-<strong>theme</strong>-beachday
+        h2 A Bespoke.js <strong>theme</strong> by <a href="https://github.com/fegemo">Flávio Coutinho</a>
+
+      section.layout-section-header
+        h1 Layouts
+        h2 This is a <code>.layout-section-header</code> slide
+        div.content
+          dl
+            dt term
+            dd There are several slide layouts available.
+            dt term
+            dd Please, go through this demo presentation to see them all.
+      section.layout-section-header
+        h1 Layouts
+        h2 This is a <code>.layout-section-header</code> slide
+        div.content
+          ul
+            li term
+            li There are <a href="#several">several</a> slide layouts available.
+            li term
+            li Please, go through this <strong>demo presentation</strong> to see them all.
+            li Please, go through this <strong>demo presentation</strong> to see them all.
+            li Please, go through this <strong>demo presentation</strong> to see them all.
+            li Please, go through this <strong>demo presentation</strong> to see them all.
+
+      section.layout-section-header
+        h1 Layouts
+        h2 This is a <code>.layout-section-header</code> slide
+        div.content
+          p There are several slide layouts available.
+          p Please, go through this demo presentation to see them all.
+
+      section.layout-regular
+        h1 Paragraph
+        p This is a <code>.layout-regular</code> slide.
+        p In eu diam <strong>sed</strong> mi blandit pulvinar.
+
+      section.layout-regular
+        h1 Code
+        pre
+          code.
+              var myVar = RegExp('');
+
+      section.layout-2-column-content
+        h1.bullet Unordered and Ordered Lists
+        ul.bullet
+          li In eu diam <strong>sed mi blandit</strong> pulvinar.
+          li Etiam hendrerit nunc ut tortor interdum faucibus.
+          li Nulla eget nibh <a href="#">et enim <strong>sagittis</strong></a> dictum.
+        ol.bullet
+          li In eu diam <strong>sed mi blandit</strong> pulvinar.
+          li Etiam hendrerit nunc ut tortor interdum faucibus.
+          li Nulla eget nibh <a href="#">et enim <strong>sagittis</strong></a> dictum.
+        p.bullet This is a <code>.layout-2-column-content</code> slide.
+
+      section.layout-centered
+        h1 Definition List
+        p This is a <code>.layout-centered</code> slide
+        dl
+          dt Term 1
+          dd It means this or that
+          dt Term 2
+          dd I really mean that it means it
+          dt Term 3
+          dd Can a canner can a can?
+
+      section.layout-main-point(data-bespoke-state='layout-main-point')
+        h1 <code>.layout-main-point</code> Slide
+
+      section(data-bespoke-state='emphatic')
+        h1 Emphatic Slide
+
+      section
+        h1.bullet Enjoy <span class='bullet'>:)</span>
+
+    a(href='https://github.com/fegemo/bespoke-theme-beachday')
+      img(style='position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;', src='http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png' alt='Fork me on GitHub')
+
+    script(src='build/build.js')

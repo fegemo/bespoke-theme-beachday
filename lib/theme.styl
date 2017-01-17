@@ -1,0 +1,69 @@
+// normalization
+@require 'normalizecss/normalize.css'
+*
+  box-sizing border-box
+
+@require variables
+@require mixins
+
+@media screen
+  .bespoke-parent
+    parent()
+    background-color $presentation-color
+    color $text-color
+    font-size $root-font-size
+
+  .bespoke-slide
+    position absolute
+    width $slide-width
+    height $slide-height
+    top 50%
+    left 50%
+    margin-left -(@width / 2)
+    margin-top -(@height / 2)
+    overflow hidden
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    //----
+    // In the future, I want to try to specify all sizes in vw/vh in order to
+    // avoid using bespoke-scale. I believe it might increase performance
+    //
+    // .bespoke-parent.scaling-full-size &,
+    // .bespoke-parent.scaling-viewport-units &
+    //   width 100%
+    //   height 100%
+    //   top 0
+    //   left 0
+    //   margin auto
+
+  .bespoke-inactive
+    opacity 0
+    pointer-events none
+
+    .bespoke-bullet-inactive
+      transition opacity 0.4s ease
+
+    // only shows next/previous 2 slides and current to increase performance
+    &:not(.bespoke-after-1):not(.bespoke-before-1):not(.bespoke-after-2):not(.bespoke-before-2)
+      display none
+
+  .emphatic
+    background-color $emphatic-color
+    color white
+    h1, h2, h3, h4, h5, h6
+      color white
+
+
+@require typography
+@require utility-classes
+@require transitions
+@require layouts
+@require bespoke-scale
+@require bespoke-bullets
+@require bespoke-progress
+@require bespoke-simple-overview
+@require bespoke-search
+@require print

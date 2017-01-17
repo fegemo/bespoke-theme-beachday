@@ -1,0 +1,20 @@
+@media screen
+  .bespoke-progress-parent
+    position absolute
+    top 0
+    left 0
+    right 0
+    height 3px
+    z-index 2
+
+  .bespoke-progress-bar
+    position absolute
+    height 100%
+    transition width .3s ease
+    &:before
+      content " "
+      position absolute
+      display block
+      width 100%
+      height 100%
+      background darken($presentation-color, 35%)
