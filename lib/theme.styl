@@ -12,6 +12,8 @@
     background-color $presentation-color
     color $text-color
     font-size $root-font-size
+    &:not(.emphatic)
+      transition background-color $transition-duration $transition-easing
 
   .bespoke-slide
     position absolute
@@ -55,6 +57,8 @@
     color white
     h1, h2, h3, h4, h5, h6
       color white
+    strong
+      color #38088e
 
 
 @require typography

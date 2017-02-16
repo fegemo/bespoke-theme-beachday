@@ -41,12 +41,21 @@ a
 code
   font-size .75em
   background-color #ddd
+  color inherit
   border-radius 3px
 
 pre > code
   font-size 0.83333em
   background-color inherit
   border-radius inherit
+  color inherit
+  code
+    color black
+
+pre
+  color white
+  background #333
+  border-radius .15em
 
 // for code not to exceed the slide width
 pre
@@ -82,6 +91,17 @@ dt, dd
   margin-bottom .5em
 dl
   clearfix()
+  &.width-40
+    & > dt
+      width 40%
+    & > dd
+      margin-left 42%
+  &.width-50
+    & > dt
+      width 50%
+    & > dd
+      margin-left 52%
+
 
 del
   color gray
@@ -113,6 +133,12 @@ blockquote
   font-family Georgia, serif
   font-style italic
   color #383838
+  border 1px solid silver
+  &.centered
+    margin-left auto
+    margin-right auto
+  > p
+    margin 0.5em auto
   &::before
     content "\201C"
     display block
@@ -154,3 +180,19 @@ figcaption
   background-color whitesmoke
   padding 5px
   margin-bottom 3px
+
+figure.embedded-caption
+  position relative
+  p
+    margin 0
+  figcaption
+    position absolute
+    background-color rgba(black, .25)
+    &.caption-bottom
+      bottom 1em
+    &.caption-top
+      top 1em
+    &.caption-top
+    &.caption-bottom
+      left 0
+      right 0
