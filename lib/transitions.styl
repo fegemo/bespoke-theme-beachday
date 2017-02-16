@@ -5,7 +5,7 @@
     overflow hidden
     .bespoke-slide
       transform translate3d(0, 0, 0)
-      transition transform 0.4s ease, opacity 0.4s ease
+      transition transform $transition-duration $transition-easing, opacity 0.4s $transition-easing
     .bespoke-before
       transform translate3d(-101%, 0, 0)
     .bespoke-after
@@ -14,7 +14,7 @@
       overflow hidden
     .bespoke-slide
       transform translate3d(0, 0, 0)
-      transition transform 0.4s ease, opacity 0.4s ease
+      transition transform $transition-duration $transition-easing, opacity $transition-duration $transition-easing
     .bespoke-before
       transform translate3d(-10%, 0, 0)
     .bespoke-after
@@ -23,7 +23,7 @@
     overflow hidden
     .bespoke-slide
       transform translate3d(0, 0, 0)
-      transition transform 0.4s ease
+      transition transform $transition-duration $transition-easing
       transform-origin 50% -250%
     .bespoke-before
       transform rotateZ(90deg)
