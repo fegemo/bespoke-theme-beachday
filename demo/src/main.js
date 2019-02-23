@@ -1,5 +1,5 @@
-var bespoke = require('bespoke'),
-  beachday = require('../../../lib/bespoke-theme-beachday.js'),
+const bespoke = require('bespoke'),
+  beachday = require('../../lib/bespoke-theme-beachday.js'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   bullets = require('bespoke-bullets'),
@@ -21,7 +21,7 @@ bespoke.from('article', [
   overview({ insertStyles: false }),
   bullets('.bullet'),
   // search(),
-  function(deck) {
+  deck => {
     // as we're using bespoke-scale with 'transform', it creates a
     // .bespoke-parent and wraps everything inside it, including the
     // bespoke-progress bar
@@ -29,7 +29,7 @@ bespoke.from('article', [
     // var bar = deck.querySelector('bespoke-progress-parent');
     // deck.parent.appendChild(bar);
   },
-  function(deck) {
+  deck => {
     // makes the content visible to avoid FoUC
     deck.parent.style.visibility = 'visible';
   }
