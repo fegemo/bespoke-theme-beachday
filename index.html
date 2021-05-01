@@ -1,147 +1,54 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>bespoke-theme-beachday</title>
-    <meta name="description" content="A cheerful theme for Bespoke.js inspired by a Google Presentations theme">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Amatica+SC:700|Source+Code+Pro" rel="stylesheet">
-  </head>
-  <body>
-    <article style="visibility: hidden" class="transition-subtle">
-      <section class="layout-title">
-        <h1>bespoke-<strong>theme</strong>-beachday</h1>
-        <h2>A Bespoke.js <strong>theme</strong> by <a href="https://github.com/fegemo">Flávio Coutinho</a></h2>
-      </section>
-      <section class="layout-section-header">
-        <h1>Layouts</h1>
-        <h2>This is a <code>.layout-section-header</code> slide</h2>
-        <div class="content">
-          <dl>
-            <dt>term</dt>
-            <dd>There are several slide layouts available.</dd>
-            <dt>term</dt>
-            <dd>Please, go through this demo presentation to see them all.</dd>
-          </dl>
-        </div>
-      </section>
-      <section class="layout-section-header">
-        <h1>Layouts</h1>
-        <h2>This is a <code>.layout-section-header</code> slide</h2>
-        <div class="content">
-          <ul>
-            <li>term</li>
-            <li>There are <a href="#several">several</a> slide layouts available.</li>
-            <li>term</li>
-            <li>Please, go through this <strong>demo presentation</strong> to see them all.</li>
-            <li>Please, go through this <strong>demo presentation</strong> to see them all.</li>
-            <li>Please, go through this <strong>demo presentation</strong> to see them all.</li>
-            <li>Please, go through this <strong>demo presentation</strong> to see them all.</li>
-          </ul>
-        </div>
-      </section>
-      <section class="layout-section-header">
-        <h1>Layouts</h1>
-        <h2>This is a <code>.layout-section-header</code> slide</h2>
-        <div class="content">
-          <p>There are several slide layouts available.</p>
-          <p>Please, go through this demo presentation to see them all.</p>
-        </div>
-      </section>
-      <section class="layout-regular">
-        <h1>Paragraph</h1>
-        <p>This is a <code>.layout-regular</code> slide.</p>
-        <p>In eu diam <strong>sed</strong> mi blandit pulvinar.</p>
-      </section>
-      <section class="layout-regular">
-        <h1>Code</h1>
-        <pre><code>var myVar = RegExp('');
-</code></pre>
-      </section>
-      <section class="layout-2-column-content">
-        <h1 class="bullet">Unordered and Ordered Lists</h1>
-        <ul class="bullet">
-          <li>In eu diam <strong>sed mi blandit</strong> pulvinar.</li>
-          <li>Etiam hendrerit nunc ut tortor interdum faucibus.</li>
-          <li>Nulla eget nibh <a href="#">et enim <strong>sagittis</strong></a> dictum.</li>
-        </ul>
-        <ol class="bullet">
-          <li>In eu diam <strong>sed mi blandit</strong> pulvinar.</li>
-          <li>Etiam hendrerit nunc ut tortor interdum faucibus.</li>
-          <li>Nulla eget nibh <a href="#">et enim <strong>sagittis</strong></a> dictum.</li>
-        </ol>
-        <p class="bullet">This is a <code>.layout-2-column-content</code> slide.</p>
-      </section>
-      <section class="layout-centered">
-        <h1>Definition List</h1>
-        <p>This is a <code>.layout-centered</code> slide</p>
-        <dl>
-          <dt>Term 1</dt>
-          <dd>It means this or that</dd>
-          <dt>Term 2</dt>
-          <dd>I really mean that it means it</dd>
-          <dt>Term 3</dt>
-          <dd>Can a canner can a can?</dd>
-        </dl>
-      </section>
-      <section class="layout-2-column-highlight-and-list">
-        <h1>Slide with a highlight</h1>
-        <iframe src="https://fegemo.github.io/cefet-web-ovelhas/racas-raras.html" height="60%" width="30%"></iframe>
-        <ul>
-          <li>This is yet another layout</li>
-          <li>It's called <code>.layout-2-column-highlight-and-list</code></li>
-          <li>And it expects <strong>a title</strong> (h1..6), <strong>one highlighted element</strong> and <strong>a list</strong> (ul, ol, dl)</li>
-        </ul>
-      </section>
-      <section class="layout-3-column-element-with-titles-expansible">
-        <h2>One code</h2>
-        <pre><code>This is a layout that allows
-3 elements to split the slide width
-equally.</code></pre>
-        <h2>Two codes</h2>
-        <pre><code>Might be useful for showing different
-code files, for example, as it allows
-the code elements to expand to full width
-when hovered.</code></pre>
-        <h2>Three codes</h2>
-        <pre><code>This is called the layout
+<!DOCTYPE html><html lan="en-US"><head><meta charset="utf-8"><title>bespoke-theme-beachday</title><meta name="description" content="A cheerful theme for Bespoke.js inspired by a Google Presentations theme"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fegemo.github.io/cefet-front-end/images/favicon.png" rel="icon"><style>dt.dl-spacer {
+  margin-top: 1em;
+}
+dd.dl-spacer {
+  margin-top: 1.5em;
+}
+</style></head><body><article style="visibility: hidden"><section class="layout-title" data-bespoke-state="transition-subtle"><h1>bespoke-<strong>theme</strong>-beachday</h1><h2>A Bespoke.js <strong>theme</strong> by <a href="https://github.com/fegemo">Flávio Coutinho</a></h2></section><section class="layout-centered" data-bespoke-state="transition-subtle"><h1>Script</h1><ol><li><a href="#supported-plugins">Supported plugins</a></li><li><a href="#slide-transitions">Slide transitions</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#typography">Typography</a></li><li><a href="#utility-classes">Utility classes</a></li></ol></section><section class="layout-section-header" data-bespoke-hash="supported-plugins" data-bespoke-state="transition-subtle"><h1>Supported <strong>plugins</strong></h1><h2> </h2><ol class="content"><li>List of plugins we have styling for</li><li>Example of <strong>bespoke-state</strong></li></ol></section><section data-bespoke-state="transition-subtle"><h1>Supported <strong>plugins</strong> <small>(1/2)</small></h1><p>The following plugins have rules regarding their styling:</p><dl class="width-30"><dt><a href="https://www.npmjs.com/package/bespoke-progress" target="_blank">bespoke-progress</a></dt><dd><strong>Progress bar</strong> at the top (+slide number)</dd><dd>For slide numbers, use <a href="https://github.com/fegemo/bespoke-progress/tree/slide-number">fegemo's branch</a> (<code>github:fegemo/bespoke-progress#slide-number</code> on <code>package.json</code>)</dd><dt><a href="https://www.npmjs.com/package/bespoke-bullets" target="_blank">bespoke-bullets</a></dt><dd>Shows a slide part (<code>.bespoke-bullet</code>) by part with <strong>sliding animation</strong> </dd><dt><a href="https://www.npmjs.com/package/bespoke-scale" target="_blank">bespoke-scale</a></dt><dd>Properly <strong>scales to fit</strong> the screen</dd><dd>For improved performance, use <a href="https://github.com/fegemo/bespoke-scale/tree/slide-number">fegemo's branch</a> (<code>github:fegemo/bespoke-progress#use-current-slide</code> on <code>package.json</code>)</dd></dl></section><section data-bespoke-state="transition-subtle"><h1>Supported <strong>plugins</strong> <small>(2/2)</small></h1><p>These plugins too have rules regarding their styling:</p><dl class="width-40"><dt><a href="https://www.npmjs.com/package/bespoke-search" target="_blank">bespoke-search</a></dt><dd>Allows <kbd>Ctrl-F</kbd>ing into the presentation</dd><dt><a href="https://www.npmjs.com/package/bespoke-backdrop" target="_blank">bespoke-backdrop</a></dt><dd>Styles slide <strong>backgrounds</strong></dd><dt><a href="https://www.npmjs.com/package/bespoke-simple-overview" target="_blank">bespoke-simple-overview</a></dt><dd>Shows <strong>zoomed out</strong> slides when hit <kbd>ESC</kbd></dd><dt><a href="https://www.npmjs.com/package/bespoke-state" target="_blank">bespoke-state</a></dt><dd>Styles the "emphatic" and "show-active-slide-and-previous" <strong>states</strong></dd></dl></section><section class="layout-centered-horizontal" data-bespoke-state="show-active-slide-and-previous transition-subtle"><h1>Using the <strong>bespoke-state</strong> plugin</h1><p>With a <code>data-bespoke-state="STHG"</code>, We can add different effects:</p><dl class="width-50"><dt><code>emphatic</code></dt><dd>Makes the whole presentation have an impactful color</dd><dt><code>show-active-slide-and-previous</code></dt><dd>Shows the previous and the current slide together</dd></dl></section><section class="layout-section-header" data-bespoke-hash="slide-transitions" data-bespoke-state="transition-sliding"><h1>Slide <strong>transitions</strong></h1><ul class="content"><li><code>sliding</code></li><li><code>subtle</code></li><li><code>transition-giant-wheel</code></li><li><code>transition-grow</code></li></ul></section><section class="layout-centered" data-bespoke-state="transition-sliding"><h1><strong>Sliding</strong> 1/3</h1><h2><code>.transition-sliding</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-sliding"><h1><strong>Sliding</strong> 2/3</h1><h2><code>.transition-sliding</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-sliding"><h1><strong>Sliding</strong> 3/3</h1><h2><code>.transition-sliding</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-subtle"><h1><strong class="alternate-color">Subtle</strong> 1/3</h1><h2><code>.transition-subtle</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-subtle"><h1><strong class="alternate-color">Subtle</strong> 2/3</h1><h2><code>.transition-subtle</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-subtle"><h1><strong class="alternate-color">Subtle</strong> 3/3</h1><h2><code>.transition-subtle</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-giant-wheel"><h1><strong>Giant Wheel</strong> 1/3</h1><h2><code>.transition-giant-wheel</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-giant-wheel"><h1><strong>Giant Wheel</strong> 2/3</h1><h2><code>.transition-giant-wheel</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-giant-wheel"><h1><strong>Giant Wheel</strong> 3/3</h1><h2><code>.transition-giant-wheel</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-grow"><h1><strong class="alternate-color">Grow</strong> 1/3</h1><h2><code>.transition-grow</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-grow"><h1><strong class="alternate-color">Grow</strong> 2/3</h1><h2><code>.transition-grow</code> on the slide</h2></section><section class="layout-centered" data-bespoke-state="transition-grow"><h1><strong class="alternate-color">Grow</strong> 3/3</h1><h2><code>.transition-grow</code> on the slide</h2></section><section class="layout-section-header" data-bespoke-hash="layouts" data-bespoke-state="transition-subtle"><h1>Layouts</h1><h2>This is a <code>.layout-section-header</code> slide</h2><div class="content"><dl><dt>layout options</dt><dd>There are several slide layouts available</dd><dt>instructions</dt><dd>It requires a <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> and something else with a <code>.content</code></dd></dl></div></section><section data-bespoke-state="transition-subtle"><h1><strong class="alternate-color">Regular</strong> layout</h1><p>To specify the slide's layout, add a class in the form <code>.layout-NAME</code>, such as <code>.layout-section-header</code>.</p><p>If a layout is not specified (we called it a <strong>regular</strong> slide),
+it looks like this one. It is just a vertical flex, no mistery.</p><p><strong>Strongs</strong> are styled with an accent color, but can also use an <strong class="alternate-color"><code>.alternate-color</code></strong>.</p></section><section class="layout-centered-horizontal" data-bespoke-state="transition-subtle"><h1>Centered layout</h1><p>If you like things centered, you can make it <strong>vertically</strong> centered (<code>.layout-centered<strong>-vertical</strong></code>), <strong class="alternate-color">horizontally</strong> (<code>.layout-centered<strong class="alternate-color">-horizontal</strong></code> - this one) or in both directions (<code>.layout-centered</code>).</p><p>The <code>.layout-centered</code> is a flexbox with: </p><pre><code>justify-content: center
+align-items: center</code></pre><p class="note">A centered layout (even the horizontal) does not center-align the text. To do so, add a <code>.text-centered</code> to the slide or element.
+</p></section><section class="layout-title" data-bespoke-state="transition-subtle"><h1>A <strong>title</strong> slide</h1><h2>Just a <strong><code>.layout-title</code></strong> with an <code>&lt;h1&gt;</code> and an <code>&lt;h2&gt;</code></h2></section><section class="layout-2-column-content" data-bespoke-state="transition-subtle"><h1>Title + 2 Columns</h1><ul><li>This slide uses a <code>.layout-2-column-content</code> layout</li><li>It splits content in 2 equal halfs <strong>using a grid</strong></li><li>And it also <strong>requires a title</strong> before the split content</li></ul><ol><li>There is also <code>.layout-3-column-content</code> and <code>.layout-4-column-content</code> layouts</li><li>If you want an element to <strong class="alternate-color">span all columns</strong>, use <code>.span-columns</code></li><li>The following code illustrates this slide's content:</li></ol><pre class="span-columns"><code>&lt;h1&gt;Layout: .layout-column-content&lt;/h1&gt;
+&lt;ul&gt;...&lt;/ul&gt;
+&lt;ol&gt;...&lt;/ol&gt;
+&lt;pre class="span-columns"&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;
+</code></pre></section><section class="layout-2-column-highlight-and-content" data-bespoke-state="transition-subtle"><h1>Slide with a highlight</h1><iframe src="https://fegemo.github.io/cefet-web-ovelhas/racas-raras.html" height="90%"></iframe><ul><li>This is yet another layout</li><li>It's called <code>.layout-2-column-highlight-and-content</code></li><li>And it expects <strong>a title</strong> (<code>h1..6</code>), <strong>one highlighted element</strong> as the second child of the slide and <strong>any other content</strong> (ul, ol, dl, p, whatever)</li></ul></section><section class="layout-3-column-element-with-titles-expansible" data-bespoke-state="transition-subtle"><h2>One code</h2><pre><code>This is a layout that
+allows 3 elements to
+split the slide width
+equally.</code></pre><h2>Two codes</h2><pre><code>Might be useful for
+showing different
+code files, for
+example, as it allows
+the code elements to
+expand to full width
+when hovered.</code></pre><h2>Three codes</h2><pre><code>This is called the
+layout
 <code>.layout-3-column-element-with-titles-expansible</code>
-and it expects three sequences of a title (h1..6) and another
+and it expects three
+sequences of a title 
+(h1..6) and another
 element (e.g., a &lt;pre&gt;)
-</code></pre>
-      </section>
-      <section class="layout-circling-balloons">
-        <h1>Circling balloons layout</h1>
-        <ul>
-          <li><img src="https://fegemo.github.io/cefet-front-end/images/logo-html.svg">
-            <p>This is the <code>.layout-circling-balloons</code></p>
-          </li>
-          <li><img src="https://fegemo.github.io/cefet-front-end/images/logo-css.svg">
-            <p>It expects a title (h1..6) and a list (ul) of 3 elements</p>
-          </li>
-          <li><img src="https://fegemo.github.io/cefet-front-end/images/logo-javascript.svg">
-            <p>Each list item can have a image (as an icon) and other elements, which are shown upon hovering</p>
-          </li>
-        </ul>
-      </section>
-      <section class="layout-tall-figure-left">
-        <h1>Tall figure + more</h1><img src="https://fegemo.github.io/cefet-front-end/images/logo-html.svg">
-        <ul>
-          <li>This uses the layout<code>.layout-tall-figure-left</code></li>
-          <li>It expects <strong>a title (h1..h6)</strong>, strong>something tall</strong> to be put to the left and some <strong>content</strong> to the right</li>
-          <li>There is also<code>.layout-tall-figure-right</code></li>
-        </ul>
-      </section>
-      <section data-bespoke-state="layout-main-point" class="layout-main-point">
-        <h1><code>.layout-main-point</code> Slide</h1>
-      </section>
-      <section data-bespoke-state="emphatic">
-        <h1>Emphatic Slide</h1>
-      </section>
-      <section>
-        <h1 class="bullet">Enjoy <span class='bullet'>:)</span></h1>
-      </section>
-    </article><a href="https://github.com/fegemo/bespoke-theme-beachday"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png" alt="Fork me on GitHub"></a>
-    <script src="build/build.js"></script>
-  </body>
-</html>
+</code></pre></section><section class="layout-circling-balloons" data-bespoke-state="transition-subtle"><h1>Circling balloons layout</h1><ul><li><p> <img src="https://fegemo.github.io/cefet-front-end/images/logo-html.svg">This is the <code>.layout-circling-balloons</code> layout.</p></li><li><p><img src="https://fegemo.github.io/cefet-front-end/images/logo-css.svg">It expects a title (<code>h1..6</code>) and a list (<code>ul</code>) of 3 elements</p></li><li><p><img src="https://fegemo.github.io/cefet-front-end/images/logo-javascript.svg">Each list item can have a image (as an icon) and other elements, which are shown upon hovering</p></li></ul></section><section class="layout-tall-figure-left" data-bespoke-state="transition-subtle"><h1>Tall figure + content</h1><img src="https://fegemo.github.io/cefet-front-end/images/logo-html.svg"><ul><li>This uses the layout <code>.layout-tall-figure-left</code></li><li>It expects <strong>a title (h1..h6)</strong>, strong>something tall</strong> to be put to the left and some <strong>content</strong> to the right</li><li>There is also <code>.layout-tall-figure-right</code> which puts the figure to the right</li></ul></section><section class="layout-centered" data-bespoke-state="transition-subtle"><h1>Definition List</h1><p>This is a <code>.layout-centered</code> slide</p><dl><dt>Term 1</dt><dd>It means this or that</dd><dt>Term 2</dt><dd>I really mean that it means it</dd><dt>Term 3</dt><dd>Can a canner can a can?</dd></dl></section><section class="layout-main-point" data-bespoke-state="layout-main-point transition-subtle"><h1><code>.layout-main-point</code> Slide</h1></section><section data-bespoke-state="emphatic transition-subtle"><h1>Emphatic Slide</h1></section><section class="layout-section-header" data-bespoke-state="transition-subtle" data-bespoke-hash="typography"><h1>Typography</h1><h2>Styling of basic elements</h2><ol class="content"><li>Text</li><li>Code</li><li>Lists</li><li>Tables</li></ol></section><section class="layout-2-column-content" data-bespoke-state="transition-subtle" style="--layout-column-gap: 3em"><h1>Text</h1><div class="bullet"><p><strong>Font-wise</strong>, titles use <a href="https://fonts.google.com/specimen/Amatic+SC">Amatic SC</a> and body text use <a href="https://fonts.google.com/specimen/Source+Code+Pro">Source Code Pro</a>.</p><p><abbr title="By the way">BTW</abbr>, ⬆️ shows styling for <code>&lt;strong&gt;</code> and <code>&lt;a&gt;</code> elements.</p><p>You can add <code>.alternate-color</code> to <strong class="alternate-color">strongs</strong> too.</p></div><div class="bullet"><p>It is possible to quote in block:</p><blockquote> Hey, someone else said this!<cite>Not me</cite></blockquote><p>The code was just:</p><pre><code>&lt;blockquote&gt;
+  Hey, someone else said this!
+  &lt;cite&gt;Not me&lt;/cite&gt;
+&lt;/blockquote&gt;
+</code></pre></div></section><section data-bespoke-state="transition-subtle"><h1>Source code</h1><p>Inline code just needs a <code>&lt;code&gt;content here&lt;/code&gt;</code> element.</p><p>Multiline code should go inside a <code>&lt;pre&gt;</code> with a <code>&lt;code&gt;</code> inside.</p><ul class="no-bullets horizontal-list"><li style="margin-right: 2em"><pre><code>&lt;pre&gt;&lt;code&gt;function delta(a, b, c) {
+  return b**2 - 4*a*c
+}&lt;/code&gt;&lt;/pre&gt;</code></pre></li><li><div><input class="switch" type="checkbox" onchange="javascript:this.closest(&quot;section&quot;).querySelector(&quot;pre&quot;).classList.toggle(this.id)" id="compact-code"><label for="compact-code"><code>.compact-code</code> on <code>&lt;pre></code></label></div><div><input class="switch" type="checkbox" onchange="javascript:this.closest(&quot;section&quot;).querySelector(&quot;pre&quot;).classList.toggle(this.id)" id="compact-code-mid"><label for="compact-code-mid"><code>.compact-code-mid</code></label></div><div><input class="switch" type="checkbox" onchange="javascript:this.closest(&quot;section&quot;).querySelector(&quot;pre&quot;).classList.toggle(this.id)" id="compact-code-more"><label for="compact-code-more"><code>.compact-code-more</code></label></div></li></ul><p>You can also add keyboard <kbd>keys</kbd> using <code>&lt;kbd&gt;keys&lt;/kbd&gt;</code>.</p></section><section class="layout-3-column-content" data-bespoke-state="transition-subtle"><h1>Lists</h1><p class="span-columns">The <strong>three</strong> types of <strong class="alternate-color">HTML lists</strong> are stylized:</p><div><p>See an <strong>unordered list</strong></p><ul><li>item 1</li><li>item 2</li><li>item 3</li></ul></div><div><p>Now an <strong class="accent-color">ordered list</strong></p><ol><li>item 1</li><li>item 2</li><li>item 3</li></ol></div><div><p>And a <strong class="alternate-color">definition list</strong></p><dl class="width-20"><dt><code>dl</code></dt><dd>is a definition list</dd><dt><code>dt</code></dt><dd>is a data term</dd><dt><code>dd</code></dt><dd>is a data definition</dd></dl></div></section><section data-bespoke-state="transition-subtle"><h1>Tables</h1><p>Some nice looking styles for tables:</p><div class="flex-align-center" style="display: flex"><table><caption>Web Programming students</caption><thead><tr><th colspan="2">Person identification</th><th>Grade</th></tr></thead><tbody><tr><td>2005046102</td><td>Epaminondas</td><td>10</td></tr><tr><td>2004021102</td><td>Pocahont</td><td>9</td></tr><tr><td>2009126725</td><td>Eliete</td><td>8</td></tr><tr><td>2041941837</td><td>Judicious</td><td>9</td></tr></tbody><tfoot><tr><td colspan="2">Average</td><td>9</td></tr></tfoot></table><div style="margin-left: 2em"><p>And some classes:</p><div><input class="switch" id="aero-rows" type="checkbox" onclick="this.closest(&quot;section&quot;).querySelector(&quot;table&quot;).classList.toggle(this.id)"><label for="aero-rows"><code>.aero-rows</code></label></div><div><input class="switch" id="aero-columns" type="checkbox" onclick="this.closest(&quot;section&quot;).querySelector(&quot;table&quot;).classList.toggle(this.id)"><label for="aero-columns"><code>.aero-columns</code></label></div></div></div></section><section class="layout-section-header" data-bespoke-state="transition-subtle" data-bespoke-hash="utility-classes"><h1>Utility classes</h1><h2>Useful ready-to-use styles</h2><ul class="content"><li>Positioning and sizing</li><li>Slides and images</li><li>Environments</li><li>Buttons, switches and badges</li><li>Lists</li><li>Layout</li></ul></section><section data-bespoke-state="transition-subtle"><h1>Positioning and sizing (<strong>1</strong>/3)</h1><dl class="full-width width-30"><dt><code>.push-{left,right}</code></dt><dd>Floats element to the left or right</dd><dt><code>.push-code-{left,right}</code></dt><dd>Floats the <code>pre</code>s inside</dd><dt class="dl-spacer"><code>.flex-align-center</code> </dt><dd class="dl-spacer">Centralizes element (inside a flex)</dd><dt><code>.flex-align-start</code> </dt><dd>Aligns an element left</dd><dt><code>.flex-align-end</code> </dt><dd>Aligns an elemnt right</dd><dt class="dl-spacer"><code>.centered</code></dt><dd class="dl-spacer">Automatic horizontal margins (and block)</dd><dt><code>.center-aligned</code></dt><dd>Center-aligns inline content</dd></dl></section><section data-bespoke-state="transition-subtle"><h1>Positioning and sizing (<strong>2</strong>/3)</h1><dl><dt><code>.contain</code></dt><dd>Makes max dimensions to be 100%</dd><dt><code>.half-width</code></dt><dd>Applies 50% width</dd><dt><code>.three-quarter-width</code></dt><dd>Applies 75% width</dd><dt><code>.full-width-slides</code></dt><dd>Applies 100% max-width</dd><dt class="dl-spacer"><code>.emoji</code></dt><dd class="dl-spacer">Emoji inside the text</dd><dt><code>.on-line</code></dt><dd>Something to appear inline (h: 1em)</dd><dt class="dl-spacer"><code>.no-margin</code></dt><dd class="dl-spacer">Removes any margin</dd><dt><code>.no-padding</code></dt><dd>Removes any padding</dd></dl></section><section data-bespoke-state="transition-subtle"><h1>Positioning and sizing (<strong>3</strong>/3)</h1><dl class="multi-column-list-2" style="--definition-list-width: 8em"><dt><code>.full-width</code></dt><dd>Applies 100% width</dd><dt><code>.full-width</code></dt><dd>Applies 80% width</dd><dt><code>.large-width</code></dt><dd>Applies 60% width</dd><dt><code>.medium-width</code></dt><dd>Applies 40% width</dd><dt><code>.small-width</code></dt><dd>Applies 20% width</dd><dt><code>.full-height</code></dt><dd>Applies 100% height</dd><dt><code>.huge-height</code></dt><dd>Applies 80% height</dd><dt><code>.large-height</code></dt><dd>Applies 60% height</dd><dt><code>.medium-height</code></dt><dd>Applies 40% height</dd><dt><code>.small-height</code></dt><dd>Applies 20% height</dd></dl><dl><dt><code>.block</code></dt><dd>Makes the image block</dd></dl></section><section class="layout-2-column-content" data-bespoke-state="transition-subtle" style="grid-template-columns: .4fr 1fr"><h1>Slides and images</h1><figure class="figure-slides clean"><img class="figure-step bullet-no-anim contain" src="https://fegemo.github.io/cefet-front-end/images/html-tree-1.png" alt="An HTML element tree"><img class="figure-step bullet-no-anim contain" src="https://fegemo.github.io/cefet-front-end/images/html-tree-2.png" alt="An HTML element tree"><img class="figure-step bullet-no-anim contain" src="https://fegemo.github.io/cefet-front-end/images/html-tree-3.png" alt="An HTML element tree"><img class="figure-step bullet-no-anim contain" src="https://fegemo.github.io/cefet-front-end/images/html-tree-4.png" alt="An HTML element tree"></figure><pre><code>&lt;figure class="figure-slides clean">
+  &lt;img src="..." class="figure-step bullet-no-anim contain">
+  &lt;img src="..." class="figure-step bullet-no-anim contain">
+  &lt;img src="..." class="figure-step bullet-no-anim contain">
+  &lt;img src="..." class="figure-step bullet-no-anim contain">
+&lt;/figure></code></pre><ul class="span-columns"><li><code>.figure-slides</code> makes a carousel of <code>.figure-step</code>s<ul><li>Use <code>.clean</code> if only the current image should be displayed</li></ul></li><li>Use <code>.bullet-no-anim</code> to avoid bulleting animation</li><li>Use <code>.contain</code> for the images not to exceed the size</li></ul></section><section class="layout-2-column-content" data-bespoke-state="transition-subtle"><h1>Environments</h1><div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;"><p class="note info" style="margin-bottom: 0.25em">This is a <code>.note.info</code> and it only requires the class on a paragraph or list item.</p><div class="result" data-before="Result" style="margin-bottom: 0.25em">This presents the <code>.result</code> of a computation in a <code>&lt;div&gt;</code> with a <code>data-before="STHG"</code> "label". </div><div class="did-you-know">This shows a <code>.did-you-know</code> section with some collateral information in a <code>&lt;div&gt;</code>.       </div></div><div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;"><pre><code>&lt;p class="note info">
+  There is also a &lt;code>.note.warning&lt;/code> ...
+&lt;/p></code></pre><pre><code>&lt;div class="result" data-before="Result">
+  This presents the &lt;code>.result&lt;/code> ...
+&lt;/div></code></pre><pre style="margin-bottom: 0;"><code>&lt;div class="did-you-know">
+  This shows a &lt;code>.did-you-know&lt;/code> ...
+&lt;/div>
+</code></pre></div></section><section class="layout-3-column-content" data-bespoke-state="transition-subtle"><h1>Buttons, switches and badges</h1><div><h2>Bookmarklet button</h2><p>Bookmarklets are actually links with JS code which we can add to the favorites bar</p><p class="center-aligned"><a class="bookmarklet" href="javascript: alert(&quot;yay&quot;)">Drag me to favorites</a></p><pre class="compact-code-more"><code>&lt;a href="javascript:..." class="bookmarklet">
+  Drag me to favorites
+&lt;/a></code></pre></div><div><h2>Switches</h2><p>Just a more interesting style for checkboxes. It requires a checkbox with <code>.switch</code> followed by a properly configure <code>&lt;label></code></p><input class="switch" id="sample-switch" type="checkbox"><label for="sample-switch">Sample switch</label><pre class="compact-code-more"><code>&lt;input type="checkbox"
+              class="switch" id="sample">
+&lt;label for="sample">Sample switch&lt;/label></code></pre></div><div><h2>Badges</h2><p>Some badges with 2 different variations:</p><ul><li><span class="badge type1">.badge.type1</span></li><li> <span class="badge type2">.badge.type2</span></li><li> <span class="badge">.badge</span></li></ul></div></section><section data-bespoke-state="transition-subtle"><h1>Lists</h1><dl class="width-30 full-width"><dt><code>.no-list-icon</code></dt><dd>Removes the bullets from list items</dd><dt><code>.horizontal-list</code></dt><dd><ul class="horizontal-list no-padding"><li>This is a</li><li>horizontal list</li><li>using flex box</li></ul></dd><dt><code>.multi-column-list-{2-5}</code><dd><ul class="multi-column-list-3"><li>item 1</li><li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li><li>item 6</li></ul></dd></dt></dl></section><section data-bespoke-state="transition-subtle"><h1>Layout: <code>.layout-split-{2-5}</code></h1><p>It is possible to split content in columns (using the flex class <code>.layout-split-{2-5}</code>. For example (<code>.layout-split-3</code>):</p><div class="layout-split-3"><p style="border: 1px solid silver; margin-right: 1em;">Paragraph 1</p><p style="border: 1px solid silver; margin-right: 1em;">Paragraph 3</p><p style="border: 1px solid silver; margin-right: 1em;">Paragraph 3</p></div></section><section data-bespoke-state="transition-subtle"><h1>Layout: <code>.code-split-{2,3}</code></h1><p>To split code which is inside some parent (usually inside <code>&lt;li&gt;</code>) content in columns. Example with a <code>&lt;li class="code-split-3"&gt;</code>:</p><ul><li class="code-split-3"><pre><code>This is code 1</code></pre><pre><code>This is code 2</code></pre><pre><code>This is code 3
+</code></pre></li></ul></section><section data-bespoke-state="transition-subtle"><h1>Layout: <code style="font-size: .5em">.item-code-width-{image,result}</code></h1><p>Make a list have a code and either an image or a <code>.result</code> to the right.</p><ul class="item-code-with-result"><li><div class="result" data-before="Result"><p>This is code 1</p></div><pre><code>&lt;p&gt;This is code 1&lt;/p&gt;</code></pre></li><li><div class="result" data-before="Result"><p>This is code 2</p></div><pre><code>&lt;p&gt;This is code 2&lt;/p&gt;</code></pre></li><li> <div class="result" data-before="Result"><p>This is code 3</p></div><pre><code>&lt;p&gt;This is code 3&lt;/p&gt;</code></pre></li></ul><p>It can also be used with images instead of <code>.result</code>s.</p></section><section class="layout-2-column-content" data-bespoke-state="transition-subtle"><h1>Layout: <code>.card-list</code></h1><div><ul class="card-list"><li><h2>Item 1</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item1.png"></li><li><h2>Item 2</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item2.png"></li><li><h2>Item 3</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item3.png"></li><li><h2>Item 4</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item4.png"></li><li><h2>Item 5</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item5.png"></li></ul><ul class="card-list polaroid title-top"><li><h2>Item 1</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item1.png"></li><li><h2>Item 2</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item2.png"></li><li><h2>Item 3</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item3.png"></li><li><h2>Item 4</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item4.png"></li><li><h2>Item 5</h2><img src="https://fegemo.github.io/bespoke-theme-sandy/imgs/item5.png"></li></ul></div><div><p class="note info">The <code>.card-list</code> class turns a simple list into one with
+a title (<code>h1, h2, h3, h4, h5, h6, figcaption</code>) and an image.</p><p><span>The second is using modifiers:</span><dl class="width-30"><dt><code>.polaroid</code></dt><dd>Adds a large white border</dd><dt><code>.title-top</code></dt><dd>Puts the title on top</dd></dl></p></div></section><section class="layout-centered" data-bespoke-state="emphatic transition-subtle"><h1 class="bullet">Enjoy <span class='bullet'>:)</span></h1></section></article><script src="build/build.js"></script></body></html>
