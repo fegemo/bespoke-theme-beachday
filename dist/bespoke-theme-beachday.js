@@ -1,5 +1,5 @@
 /*!
- * bespoke-theme-beachday v1.0.0
+ * bespoke-theme-beachday v2.0.0
  *
  * Copyright 2021, Flávio Coutinho
  * This content is released under the MIT license
