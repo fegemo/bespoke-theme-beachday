@@ -1,5 +1,5 @@
 // font families
-$font-family-serif = 'Amatica SC', cursive
+$font-family-serif = 'Amatic SC', cursive
 $font-family-sans = 'Source Code Pro', monospace
 
 // layout
@@ -7,20 +7,197 @@ $slide-height = 600px
 $slide-width = $slide-height * (16/9)
 $root-font-size = 24px
 
-// slide transitions
-$transition-duration = 400ms
-$transition-easing = ease
-
 // colors
 $presentation-color = #fff
 $accent-color = #00fdc8
+$alternate-color = #7b9c02
 $emphatic-color = #7c7ce0
 $link-color = #db4437
 $text-color = #252525
 $big-title-color = #6e8ae4
 $regular-title-color = #000
+$inline-code-bg-color = #ddd
+$inline-emphatic-code-bg-color = #ddd
+$block-code-bg-color = #fafafa
+$block-code-text-color = #383a42
+$shadow-color = #0003
+$accent-more-color = darken($accent-color, 62%)
+$circling-ballons-bg = #ffd700
+$note-icon-bg = #fff
+$note-info-bg-color-start = #ffffe0
+$note-info-bg-color-end = #a9dbe0
+$note-info-accent-color = #0ba8b8
+$note-warning-bg-color-start = lightyellow
+$note-warning-bg-color-end = #fff176
+$note-warning-accent-color = darkgoldenrod
+$result-bg-color-start = #f6fbff
+$result-bg-color-end =  #e3ebf1
+$result-accent-color = #3063a9
+$did-you-know-accent-color = #800080
+$table-border-color = #000
+$table-head-bg = #333
+$table-foot-bg = #ddd
+$table-row-border-color = #ccc
+$table-row-bg-even = #eaeaeab3
+$table-head-color = #fff
+$table-foot-color = #000
+$quote-bg = whitesmoke
+$quote-color = #383838
+$quote-border-color = silver
+$quote-quotes-color = #7a7a7a
+$quote-cite-color = #999
+$figcaption-bg = whitesmoke
+$emphatic-accent-color = #38088e
+$button-color = currentColor
 
-// elements configuration
-$definition-list-width = 10em
-$definition-list-spacing = 0.5em
-$table-border-color = gray
+$presentation-color-dark = #0c0c0c
+$accent-color-dark = #006d56
+$alternate-color-dark = #c8ff00
+$emphatic-color-dark = #00004c
+$link-color-dark = #ff4d3e
+$text-color-dark = #ffffff
+$big-title-color-dark = #6283ec   
+$regular-title-color-dark = #ffffff
+$inline-code-bg-color-dark = #444 
+$inline-emphatic-code-bg-color-dark = #c1bfbf
+$block-code-bg-color-dark = #23241f
+$block-code-text-color-dark = #f8f8f2
+$shadow-color-dark = #fff3
+$accent-more-color-dark = lighten($accent-color, 62%)
+$circling-ballons-bg-dark = #d29e25
+$note-icon-bg-dark = #fff
+$note-info-bg-color-start-dark = #61bdca
+$note-info-bg-color-end-dark = #015861
+$note-info-accent-color-dark = #003135
+$note-warning-bg-color-start-dark = #cccc06
+$note-warning-bg-color-end-dark = #7b6e00
+$note-warning-accent-color-dark = #544a00
+$result-bg-color-start-dark = #243848
+$result-bg-color-end-dark = #0f121f
+$result-accent-color-dark = #f9ffee
+$did-you-know-accent-color-dark = #ff2cff
+$table-border-color-dark = #fff
+$table-head-bg-dark = #bfbfbf
+$table-foot-bg-dark = #2b2b2b
+$table-row-border-color-dark = #313131
+$table-row-bg-even-dark = #292929b3
+$table-head-color-dark = #000;
+$table-foot-color-dark = #fff;
+$quote-bg-dark = #232227
+$quote-color-dark = #d8d8d8
+$quote-border-color-dark = #918cb5
+$quote-quotes-color-dark = #4d46c7
+$quote-cite-color-dark = #6084ff
+$figcaption-bg-dark = #232323;
+$emphatic-accent-color-dark = #6734c3
+$button-color-dark = #333
+
+:root
+  // slide config
+  --slide-width: $slide-width
+  --slide-height: $slide-height
+  
+  // colors
+  --presentation-color: $presentation-color
+  --accent-color: $accent-color
+  --alternate-color: $alternate-color
+  --emphatic-color: $emphatic-color
+  --link-color: $link-color
+  --text-color: $text-color
+  --big-title-color: $big-title-color
+  --regular-title-color: $regular-title-color
+  --inline-code-bg-color: $inline-code-bg-color 
+  --inline-emphatic-code-bg-color: $inline-emphatic-code-bg-color 
+  --block-code-bg-color: $block-code-bg-color
+  --block-code-text-color: $block-code-text-color
+  --shadow-color: $shadow-color
+  --accent-more-color: $accent-more-color
+  --circling-balloons-bg: $circling-ballons-bg
+  --note-icon-bg: $note-icon-bg
+  --note-info-bg-color-start: $note-info-bg-color-start
+  --note-info-bg-color-end: $note-info-bg-color-end
+  --note-info-accent-color: $note-info-bg-accent-color
+  --note-warning-bg-color-start: $note-warning-bg-color-start
+  --note-warning-bg-color-end: $note-warning-bg-color-end
+  --note-warning-accent-color: $note-warning-accent-color
+  --result-bg-color-start: $result-bg-color-start
+  --result-bg-color-end: $result-bg-color-end
+  --result-accent-color: $result-accent-color
+  --did-you-know-accent-color: $did-you-know-accent-color
+  --table-border-color: $table-border-color
+  --table-head-bg: $table-head-bg
+  --table-foot-bg: $table-foot-bg
+  --table-row-border-color: $table-row-border-color
+  --table-row-bg-even: $table-row-bg-even
+  --table-head-color: $table-head-color
+  --table-foot-color: $table-foot-color
+  --quote-bg: $quote-bg
+  --quote-color: $quote-color
+  --quote-border-color: $quote-border-color
+  --quote-quotes-color: $quote-quotes-color
+  --quote-cite-color: $quote-cite-color
+  --figcaption-bg: $figcaption-bg
+  --emphatic-accent-color: $emphatic-accent-color
+  --button-color: $button-color
+
+  // slide transitions
+  --transition-duration: 400ms
+  --transition-easing: ease
+  
+  // elements configuration
+  --definition-list-width: 10em
+  --definition-list-spacing: 0.5em
+
+  // states
+  --show-2-slides-rotation: 25deg
+  --show-2-slides-z-distance: -750px
+  --show-2-slides-x-distance: 380px
+
+  // layouts
+  --layout-column-gap: 1em
+
+
+@media screen and (prefers-color-scheme: dark)
+  :root
+    --presentation-color: $presentation-color-dark
+    --accent-color: $accent-color-dark
+    --alternate-color: $alternate-color-dark
+    --emphatic-color: $emphatic-color-dark
+    --link-color: $link-color-dark
+    --text-color: $text-color-dark
+    --big-title-color: $big-title-color-dark
+    --regular-title-color: $regular-title-color-dark
+    --inline-code-bg-color: $inline-code-bg-color-dark
+    --inline-emphatic-code-bg-color: $inline-emphatic-code-bg-color-dark
+    --block-code-bg-color: $block-code-bg-color-dark
+    --block-code-text-color: $block-code-text-color-dark
+    --shadow-color: $shadow-color-dark
+    --accent-more-color: $accent-more-color-dark
+    --circling-balloons-bg: $circling-ballons-bg-dark
+    --note-icon-bg: $note-icon-bg-dark
+    --note-info-bg-color-start: $note-info-bg-color-start-dark
+    --note-info-bg-color-end: $note-info-bg-color-end-dark
+    --note-info-accent-color: $note-info-accent-color-dark
+    --note-warning-bg-color-start: $note-warning-bg-color-start-dark
+    --note-warning-bg-color-end: $note-warning-bg-color-end-dark
+    --note-warning-accent-color: $note-warning-accent-color-dark
+    --result-bg-color-start: $result-bg-color-start-dark
+    --result-bg-color-end: $result-bg-color-end-dark
+    --result-accent-color: $result-accent-color-dark
+    --did-you-know-accent-color: $did-you-know-accent-color-dark
+    --table-border-color: $table-border-color-dark
+    --table-head-bg: $table-head-bg-dark
+    --table-foot-bg: $table-foot-bg-dark
+    --table-row-border-color: $table-row-border-color-dark
+    --table-row-bg-even: $table-row-bg-even-dark
+    --table-head-color: $table-head-color-dark
+    --table-foot-color: $table-foot-color-dark
+    --quote-bg: $quote-bg-dark
+    --quote-color: $quote-color-dark
+    --quote-border-color: $quote-border-color-dark
+    --quote-quotes-color: $quote-quotes-color-dark
+    --quote-cite-color: $quote-cite-color-dark
+    --figcaption-bg: $figcaption-bg-dark
+    --emphatic-accent-color: $emphatic-accent-color-dark
+    --button-color: $button-color-dark
+

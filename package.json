@@ -16,47 +16,48 @@
     "url": "git://github.com/fegemo/bespoke-theme-beachday.git"
   },
   "peerDependencies": {
-    "bespoke": ">=1.0.0",
+    "bespoke": ">=1.1.0",
     "bespoke-classes": "^1.0.0"
   },
   "devDependencies": {
     "bespoke": "^1.1.0",
     "bespoke-bullets": "^1.1.0",
-    "bespoke-hash": "^1.0.2",
+    "bespoke-hash": "^1.1.0",
     "bespoke-keys": "^1.1.0",
-    "bespoke-progress": "^1.0.0",
+    "bespoke-progress": "github:fegemo/bespoke-progress#slide-number",
     "bespoke-scale": "github:fegemo/bespoke-scale#use-current-slide",
-    "bespoke-simple-overview": "^1.0.0",
+    "bespoke-search": "^1.0.0",
+    "bespoke-simple-overview": "^1.1.1",
     "bespoke-state": "^1.0.0",
     "bespoke-touch": "^1.0.0",
-    "brfs": "^2.0.2",
-    "browserify": "^16.2.3",
+    "browserify": "^17.0.0",
+    "browserify-css": "^0.15.0",
     "delete": "^1.1.0",
-    "gh-pages": "^2.0.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "6.0.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-header": "^2.0.7",
-    "gulp-livereload": "^4.0.1",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-header": "^2.0.9",
+    "gulp-livereload": "^4.0.2",
     "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.4.0",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^3.0.1",
-    "gulp-webserver": "^0.9.1",
-    "insert-css": "^2.0.0",
-    "normalizecss": "^3.0.0",
-    "st": "^1.2.2",
-    "vinyl-buffer": "^1.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-terser": "^2.0.1",
+    "normalize.css": "^8.0.1",
+    "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {},
   "engines": {
-    "node": ">=7.3.0"
+    "node": ">=10.0.0"
   },
   "license": "MIT",
   "keywords": [
     "bespoke-plugin",
     "bespoke-theme"
+  ],
+  "browserslist": [
+    "> 1% and last 2 versions and not dead and not ie > 0"
   ]
 }

@@ -6,21 +6,21 @@ const bespoke = require('bespoke'),
   scale = require('bespoke-scale'),
   progress = require('bespoke-progress'),
   overview = require('bespoke-simple-overview'),
-  // search = require('bespoke-search'),
+  search = require('bespoke-search'),
   hash = require('bespoke-hash'),
   state = require('bespoke-state');
 
 bespoke.from('article', [
-  beachday({ insertFonts: false }),
+  beachday({ insertFonts: true }),
   keys(),
   touch(),
   state(),
-  // scale('transform'),
+  scale('transform'),
   progress(),
   hash(),
   overview({ insertStyles: false }),
-  bullets('.bullet'),
-  // search(),
+  bullets('.bullet, .figure-step'),
+  search({ insertStyles: false }),
   deck => {
     // as we're using bespoke-scale with 'transform', it creates a
     // .bespoke-parent and wraps everything inside it, including the
@@ -31,6 +31,8 @@ bespoke.from('article', [
   },
   deck => {
     // makes the content visible to avoid FoUC
-    deck.parent.style.visibility = 'visible';
+    setTimeout(() => {
+      deck.parent.style.visibility = 'visible';
+    }, 300)
   }
 ]);

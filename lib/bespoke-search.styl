@@ -1,53 +1,160 @@
-$search-input-width = 200px
+:root
+  --search-result-bg yellow
+  --search-result-focused-bg orange
 
-@media screen
+#bespoke-search-parent
+  --search-parent-bg #0006
+  --search-margin 0.5em
+  --search-bg #fff3
+  --search-input-length 12em
+  --search-input-position flex-end
+  --search-input-color #333
+  --search-info-color #333
+  --search-info-kbd-color #000
+  --search-info-kbd-bg #ccc
+  --search-no-result-color #8b0000
+
+  position absolute
+  left 0
+  top 0
+  right 0
+  bottom 0
+  display flex
+  flex-direction column
+  justify-content var(--search-input-position)
+  align-items center
+  pointer-events none
+  opacity 0
+  transition all 200ms ease
+  background-color var(--search-parent-bg);
+  font-size 1.25rem
+  perspective 900px
+  &.bespoke-search-searching
+    opacity 1
+    pointer-events auto
+    z-index 1000
+
+#bespoke-search
+  display flex
+  flex-direction row
+  justify-content space-between
+  flex-wrap wrap
+  align-items baseline
+  margin var(--search-margin)
+  padding 1.25em
+  border-radius 10px
+  width calc(var(--search-input-length) + 8em)
+  background-color var(--search-bg)
+  backdrop-filter blur(6px)
+  transition all 300ms cubic-bezier(0.06, 0.99, 0.46, 1.16)
+  transform translateY(-60px) rotateX(90deg)
+  opacity 0
+
+
+#bespoke-search-results-count
+  font-size 0.75em
+  font-family monospace
+
+
+.bespoke-search-no-result
+  & > #bespoke-search-input
+    outline 1px solid currentColor
+    border-color transparent
+    color var(--search-no-result-color)
+ 
+.bespoke-search-result
+  background-color var(--search-result-bg, yellow)
+
+
+.bespoke-search-result-focused
+  background-color var(--search-result-focused-bg, orange)
+
+#bespoke-search-input
+  width var(--search-input-length)
+  padding 0.15em 0.25em
+  border 1px solid currentColor
+  border-radius 5px
+  color var(--search-input-color)
+  font-size 1em
+
+.bespoke-search-searching
   #bespoke-search
-    position absolute
-    width 100%
-    height 100%
-    pointer-events none
-    z-index 1
-    opacity 0
-    background-color rgba(gray, .3)
-    transition opacity 100ms ease-out
-    &.bespoke-search-searching
+    transform scale(1)
+    opacity 1
+
+#bespoke-search-info
+  width 100%
+  margin-top 1em
+  font-size 0.9em
+  text-align left
+  color var(--search-info-color)
+  kbd
+    margin 0px 0.1em
+    padding 0.1em 0.6em
+    border-radius 3px
+    border 1px solid rgb(204, 204, 204)
+    color var(--search-info-kbd-color)
+    line-height 1.4
+    font-size 0.7em
+    display inline-block
+    box-shadow 0px 1px 0px #0009, inset 0px 0px 0px 2px #ccc
+    background-color var(--search-info-kbd-bg)
+    &:last-of-type
+      margin-right 1em
+  summary
+    display list-item
+    counter-increment list-item 0
+    list-style inside disclosure-closed
+    cursor pointer
+
+.bespoke-search-info-pair
+  margin-right 1em
+  white-space nowrap
+  display inline-flex
+  align-items center
+  margin-bottom 0.25em
+
+#bespoke-search-info[open]
+  & > summary
+    &:first-of-type
+      list-style-type disclosure-open
+
+.bespoke-bullets-off
+  .bespoke-bullet
+    &.bespoke-bullet-inactive
       opacity 1
-      > #bespoke-search-input
-        bottom 5%
+      transform none
 
-  #bespoke-search-input
-    position absolute
-    left 50%
-    bottom 0
-    pointer-events all
-    width $search-input-width
-    margin-left ($search-input-width/2) * (-1)
-    padding 8px
-    border-radius 10px
-    border 1px solid silver
-    outline none
-    color gray
-    font-size x-large
-    background-color rgba(white, .9)
-    transition bottom 140ms ease-out
+.bespoke-search-shaking
+  animation shaking 500ms ease-out 0s 1
 
-  .bespoke-search-result
-    background-color yellow
+@keyframes shaking
+  0%
+    transform translate3d(4px, 0px, 0px)
+  10%
+      transform translate3d(-7px, -5px, 0px)
+  20%
+      transform translate3d(8px, 5px, 0px)
+  30%
+      transform translate3d(-7px, 3px, 0px)
+  40%
+      transform translate3d(9px, -3px, 0px)
+  50%
+      transform translate3d(-4px, 3px, 0px)
+  60%
+      transform translate3d(4px, -4px, 0px)
+  70%
+      transform translate3d(-5px, -4px, 0px)
+  80%
+      transform translate3d(4px, 2px, 0px)
+  90%
+      transform translate3d(-3px, -1px, 0px)
+  100%
+      transform translate3d(0px, 0px, 0px)
 
-  .bespoke-search-result-focused
-    background-color orange
 
-  #bespoke-search.bespoke-search-no-result > #bespoke-search-input
-    border 1px solid darkred
-    color darkred
-
-  #bespoke-search-results-count
-    position absolute
-    bottom 1%
-    left 50%
-    margin-left -30px
-    width 60px
-    text-align center
-    font-size smaller
-    color blueviolet
-    font-weight bold
+@media (prefers-color-scheme: dark)
+  #bespoke-search-parent
+    --search-parent-bg #fff6;
+    --search-bg #0003
+    --search-info-color #eee

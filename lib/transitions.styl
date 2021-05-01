@@ -1,31 +1,69 @@
 // slide transitions
 //------------------
 @media screen
+  .transition-sliding,
+  .transition-subtle,
+  .transition-giant-wheel,
+  .transition-grow
+    .bespoke-active
+      transform none
+      opacity 1
+  
   .transition-sliding
-    overflow hidden
     .bespoke-slide
-      transform translate3d(0, 0, 0)
-      transition transform $transition-duration $transition-easing, opacity 0.4s $transition-easing
+      transition-property transform, opacity
+      transition-duration var(--transition-duration)
+      transition-timing-function var(--transition-easing)
     .bespoke-before
       transform translate3d(-101%, 0, 0)
     .bespoke-after
       transform translate3d(101%, 0, 0)
+
   .transition-subtle
-      overflow hidden
     .bespoke-slide
-      transform translate3d(0, 0, 0)
-      transition transform $transition-duration $transition-easing, opacity $transition-duration $transition-easing
+      transition-property transform, opacity
+      transition-duration calc(0.75 * var(--transition-duration))
+      transition-timing-function var(--transition-easing)
     .bespoke-before
-      transform translate3d(-10%, 0, 0)
+      transform translateX(-1000px)
     .bespoke-after
-      transform translate3d(10%, 0, 0)
+      transform translateX( 1000px)
+    .bespoke-before-1
+      transform translateX(-100px)
+    .bespoke-after-1
+      transform translateX( 100px)
+    .bespoke-before-2
+      transform translateX(-300px)
+    .bespoke-after-2
+      transform translateX( 300px)
+
   .transition-giant-wheel
-    overflow hidden
     .bespoke-slide
-      transform translate3d(0, 0, 0)
-      transition transform $transition-duration $transition-easing
-      transform-origin 50% -250%
+      transition-property transform, opacity
+      transition-duration var(--transition-duration)
+      transition-timing-function var(--transition-easing)
+      transform-origin 50% 100%
     .bespoke-before
-      transform rotateZ(90deg)
+      transform rotateX(90deg) scale(0.5)
     .bespoke-after
-      transform rotateZ(-90deg)
+      transform rotateX(-90deg) scale(0.5)
+
+  .transition-grow
+    .bespoke-slide
+      transition-property transform, opacity
+      transition-duration calc(0.5 * var(--transition-duration))
+      transition-timing-function var(--transition-easing)
+    .bespoke-before
+      transform scale(1.1)
+    .bespoke-after
+      transform scale(0.9)
+
+
+@media screen and (prefers-reduced-motion)
+  .transition-sliding,
+  .transition-subtle,
+  .transition-giant-wheel,
+  .transition-grow
+    .bespoke-slide
+      transition-property none
+    

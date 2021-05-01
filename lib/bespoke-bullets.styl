@@ -1,25 +1,26 @@
 @media screen
-  .bespoke-bullet
-    opacity 1
-    transform translate3d(0, 0, 0)
-    transition all 0.4s ease
-
-  .bespoke-bullet-inactive
-    opacity: 0
-    pointer-events: none
-    transform translate3d(40px, 0, 0)
-    transition all 0.2s ease
-
-  .bespoke-bullet-off
-    .bespoke-bullet-inactive
-      display list-item
-      opacity initial
-      transform initial
-
-  .bullet-old
-    color gray
-
-  .bullet-no-anim
-    transition-property opacity
-    &.bespoke-bullet-inactive
+  .bespoke-slide
+    .bespoke-bullet
+      opacity 1
       transform none
+      transition all 0.4s ease
+
+    .bespoke-bullet-inactive
+      opacity 0
+      pointer-events none
+      transform translateX(40px)
+      transition all 0.2s ease
+
+    .bespoke-bullet-off
+      .bespoke-bullet-inactive
+        display list-item
+        opacity initial
+        transform initial
+
+    .bullet-old
+      color gray
+
+    .bullet-no-anim
+      transition none !important
+      &.bespoke-bullet-inactive
+        transform none

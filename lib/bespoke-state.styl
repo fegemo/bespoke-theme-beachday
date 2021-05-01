@@ -1,0 +1,23 @@
+.emphatic
+  background-color var(--emphatic-color)
+  color white
+  h1, h2, h3, h4, h5, h6
+    color white
+  strong
+  code
+    color var(--emphatic-accent-color)
+  code
+    background-color var(--inline-emphatic-code-bg-color)
+
+
+.show-active-slide-and-previous
+  .bespoke-before-1
+    transform translate3d(calc(-1 * var(--show-2-slides-x-distance)), 0, var(--show-2-slides-z-distance)) rotateY(var(--show-2-slides-rotation))
+    opacity 1
+  .bespoke-active
+    transform translate3d(var(--show-2-slides-x-distance), 0, var(--show-2-slides-z-distance)) rotateY(calc(-1 * var(--show-2-slides-rotation)))
+
+[data-bespoke-state=show-active-slide-and-previous]
+  &.bespoke-before-1
+    transform translate3d(calc(-1 * var(--show-2-slides-x-distance)), 0, var(--show-2-slides-z-distance)) rotateY(var(--show-2-slides-rotation))
+    opacity 0

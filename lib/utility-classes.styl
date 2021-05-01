@@ -1,9 +1,5 @@
 // pulling images left or right
-$image-margin-to-text = 20px
-img[alt$="right"]
-  float right
-img[alt$="left"]
-  float left
+$image-margin-to-text = 1.25em
 .push-right
   float right
   margin-left $image-margin-to-text
@@ -11,15 +7,62 @@ img[alt$="left"]
   float left
   margin-right $image-margin-to-text
 
+.push-code-right
+  pre
+    float right
+    clear right
+.push-code-left
+  pre
+  & > code
+    float left
+    clear left
+.push-code-right-without-clearing
+  pre
+    clear none
+    float right
+  & > code
+    float right
+
+.flex-align-center
+  align-self center
+.flex-align-start
+  align-self flex-start
+.flex-align-end
+  align-self flex-end
+
+
+.alternate-color
+  color var(--alternate-color)
+
+pre.compact-code
+.compact-code pre
+.compact-code ~ pre
+  line-height 1em
+pre.compact-code-mid
+.compact-code-mid pre
+.compact-code-mid ~ pre
+  line-height 1em
+  font-size 90%
+pre.compact-code-more
+.compact-code-more pre
+.compact-code-more ~ pre
+  line-height 1em
+  font-size 75%
+
 
 // figures with overlapped images
 .figure-slides
   position relative
+  &.clean
+    .bespoke-bullet:not(.bespoke-bullet-current):not(:last-child)
+      visibility hidden
+      opacity 0
 
 .figure-step:not(:first-child)
   position absolute
   top 0
   left 0
+
 
 // bookmarklets (links looking like buttons)
 a.bookmarklet
@@ -36,73 +79,89 @@ a.bookmarklet
     cursor move
 
 
+// badges
+.badge
+  display inline-block
+  background-color var(--presentation-color)
+  border-radius 4px
+  border 1px solid var(--text-color)
+  color darkgray
+  font-size 75%
+  line-height 1em
+  padding 0.1em 0.2em
+
+  &.type1
+    color teal
+    border-color teal
+
+  &.type2
+    color cornflowerblue
+    border-color cornflowerblue
+
+
 // switches (toggle buttons - on and off)
-input.switch:empty
-  display block
-  margin-left -999px
+input.switch
+  appearance none
 
 
-input.switch:empty ~ label
+input.switch ~ label
   position relative
-  float left
-  line-height 1.6em
-  text-indent 4em
-  margin 0.2em 0
   cursor pointer
   user-select none
 
-input.switch:empty ~ label:before,
-input.switch:empty ~ label:after
-  position absolute
-  display block
-  top 0
-  bottom 0
-  left 0
+input.switch ~ label::before,
+input.switch ~ label::after
   content ' '
-  width 3.6em
-  background-color #c33
-  border-radius 0.3em
-  box-shadow inset 0 0.2em 0 rgba(0,0,0,0.3)
+  display inline-block
+  position relative
+  top calc((100% - 0.75em) / 2 + 0.5em)
+  margin-right .25em
+  height 0.75em
+  width 1.5em
+  background-color #f77
+  border-radius 5px
+  box-shadow inset 0 0.1em 0 var(--shadow-color)
   transition all 100ms ease-in
 
-input.switch:empty ~ label:after
-  width 1.4em
-  top 0.1em
-  bottom 0.1em
+input.switch ~ label::after
+  position absolute
+  left 0
+  width 0.75em
+  height 0.55em
+  top calc((100% - 0.75em) / 2 + 0.1em)
+  bottom calc((100% - 0.75em) / 2 + 0.1em)
   margin-left 0.1em
   background-color #fff
   border-radius 0.15em
-  box-shadow inset 0 -0.2em 0 rgba(0,0,0,0.2)
+  box-shadow inset 0 -0.2em 0 var(--shadow-color)
 
-input.switch:checked ~ label:before
-  background-color #393
+input.switch:checked ~ label::before
+  background-color #2ae82a
 
-input.switch:checked ~ label:after
-  margin-left 2.1em
+input.switch:checked ~ label::after
+  margin-left 0.65em
 
 
-// images
-img
-  &.full-width
-    width 100%
-  &.large-width
-    width 80%
-  &.medium-width
-    width 60%
-  &.small-width
-    width 40%
-  &.full-height
-    height 100%
-  &.huge-height
-    height 80%
-  &.large-height
-    height 60%
-  &.medium-height
-    height 40%
-  &.small-height
-    height 20%
-  &.block
-    display block
+.full-width
+  width 100%
+.large-width
+  width 80%
+.medium-width
+  width 60%
+.small-width
+  width 40%
+.full-height
+  height 100%
+.huge-height
+  height 80%
+.large-height
+  height 60%
+.medium-height
+  height 40%
+.small-height
+  height 20%
+.block
+  display block
 
 // image portraits
 $portrait-size = 150px
@@ -161,16 +220,25 @@ $portrait-size = 150px
   max-width 100%
   max-height 100%
 
+.slide-contain
+  max-width var(--slide-width)
+  max-height var(--slide-height)
+
 .half-width
   width 50%
 .three-quarter-width
   width 75%
 
-img.centered
-  display block
+.full-width-slides
+  max-width 100%
+  & img
+    max-width 100%
+    
+.centered
   margin-left auto
   margin-right auto
-
+  &.img
+    display block
 
 // general classes
 .center-aligned
@@ -188,17 +256,23 @@ img.centered
 .no-margin
   margin 0
 
-// lists
-.horizontal-list
-  list-style none
+.no-padding
+  padding 0
 
-  &> li
-    display inline-block
-    width 25%
-    margin 0 4.5% 0 0
-    vertical-align middle
-    &:last-of-type
-      margin 0
+@media (prefers-color-scheme: dark)
+  .invert-colors-dark-mode
+    filter invert(1)
+
+// lists
+.no-bullets
+.no-list-icon
+  list-style-type none
+
+.horizontal-list
+  display flex
+  flex-wrap wrap
+  flex-direction row
+  justify-content space-between
 
 for num in (2..5)
   .multi-column-list-{num}
@@ -207,7 +281,96 @@ for num in (2..5)
     list-style-position inside
 
 
-// splitting the content in columns
+// environments
+.note
+  border 1px solid transparent
+  list-style-type none
+  border-radius 5px
+  box-shadow 3px 3px 3px var(--shadow-color)
+  padding 0.3em 0.5em
+
+  & > p:first-of-type
+    margin-top 0
+
+  &::before
+    content ""
+    margin-right 1rem
+    width 1.5em
+    height 1.5em
+    display inline-block
+    float left
+    shape-outside circle(50%)
+    text-align center
+    line-height 1.5em
+    font-size 1em
+    box-sizing border-box
+    background var(--note-icon-bg)
+    border-radius 50%
+    color #000;
+
+  &.info
+    border-color var(--note-info-accent-color)
+    background linear-gradient(to right bottom, var(--note-info-bg-color-start), var(--note-info-bg-color-end))
+    strong
+      color var(--note-info-accent-color);
+    &::before
+      content "ℹ️"
+
+  &,
+  &.warning
+    border-color var(--note-warning-accent-color)
+    background linear-gradient(to right bottom, var(--note-warning-bg-color-start), var(--note-warning-bg-color-end))
+    strong
+      color var(--note-warning-accent-color)
+    &::before
+      content "⚠️"
+
+
+.markdown-it-container
+  position relative
+  & > p
+    margin 0
+  &::before
+    content attr(data-before)
+
+div.result
+  @extend .markdown-it-container
+  margin-left 0
+  padding 0.75em .5em .5em
+  background-image linear-gradient(135deg, var(--result-bg-color-start), var(--result-bg-color-end))
+  border 1px dashed var(--result-accent-color)
+  &::before
+    background-color var(--result-accent-color);
+    color var(--presentation-color)
+    display inline-block
+    transform rotate(-3deg)
+    font-weight bold
+    position absolute
+    top -3px
+    left -3px
+    font-size .6em
+    line-height 1.5em
+    padding 0 .5em
+
+div.did-you-know
+  @extend .markdown-it-container
+  background-image url(https://fegemo.github.io/cefet-front-end/images/question-mark-bg.png)
+  border-left 4px solid var(--did-you-know-accent-color)
+  box-shadow 5px 5px 5px var(--shadow-color)
+  padding-right 1em
+  padding-left 0.5em
+  &::before
+    display block
+    margin 4px
+    background-color white
+    font-family "Purisa", "Comic Sans MS", cursive;
+    font-weight bold
+    color var(--did-you-know-accent-color);
+  & > p
+    padding-left 0.5em
+
+
+// layout: splitting the content in columns
 for num in (2..5)
   .layout-split-{num}
     flex-direction row
@@ -221,6 +384,135 @@ for num in (2..5)
       flex-grow 1
       text-align center
 
+
+.code-split-2,
+.code-split-3
+  display flex
+  align-items flex-start
+  > *
+    flex 1
+    &:not(:first-child)
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+    &:not(:last-child)
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+  pre.hljs
+    margin-top 0
+    margin-bottom 0
+    &:not(:last-of-type)
+      border-right 3px double white
+  pre.hljs + pre.hljs
+    margin-top 0
+
+.two-column-code code,
+.two-column-code pre
+.three-column-code code,
+.three-column-code pre
+.four-column-code code,
+.four-column-code pre
+  column-rule 3px double var(--shadow-color)
+  column-gap 2em
+
+.two-column-code code,
+.two-column-code pre
+  column-count 2
+.three-column-code code,
+.three-column-code pre
+  column-count 3
+.four-column-code code,
+.four-column-code pre
+  column-count 4
+
+.floating-right-code pre
+  float right
+  width auto
+  margin-left 1em
+
+
+// card list
+.card-list
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  justify-content space-around
+  list-style-type none
+  padding 0
+  li
+    flex 1
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-start
+    margin-right 0.25em
+    h1, h2, h3, h4, h5, h6, figcaption
+      font-size 1em
+      text-align center
+      order 1
+      margin-top 0.5em !important
+    img
+      max-width 100%
+      margin auto
+      object-fit contain
+      object-position center
+      order 0
+
+  &.polaroid
+    li
+      background var(--presentation-color)
+      box-shadow: 0 8px 16px var(--shadow-color), 0 4px 16px var(--shadow-color)
+      img
+        background-color #f0f8ff
+        border 11px solid var(--presentation-color);
+        image-rendering pixelated
+
+  &.cover
+    li img
+      object-fit cover
+  &.contain
+    li img
+      object-fit contain
+
+  &.title-top
+    h1, h2, h3, h4, h5, h6, figcaption
+      order 0
+    img
+      order 1
+
+
+.inverted-text-colors
+  background var(--text-color)
+  color var(--presentation-color)
+
+.smaller-text-90
+  font-size 90%
+.smaller-text-80
+  font-size 80%
+.smaller-text-70
+  font-size 70%
+.smaller-text-60
+  font-size 60%
+  
+.bring-forward
+  position relative
+  z-index 1
+
+.item-code-with-image
+.item-code-with-result
+  padding-left 0
+  list-style-type none
+
+  li
+    clear right
+    margin-bottom 1em
+
+  li > img,
+  li > .result
+    float right
+    margin-left 1em
+  li > .result
+    margin-top 0
+
 // animations
 .bouncing-left
   animation bouncing-left .8s cubic-bezier(0.22, 0.61, 0.36, 1) 0s infinite alternate
@@ -233,3 +525,79 @@ for i in 1..6
 @keyframes bouncing-left
   to
     transform translateX(5%) scaleX(.96)
+
+
+.underline
+  position relative
+  &::after
+    content " "
+    position absolute
+    bottom 5%
+    left 0
+    width 100%
+    border 2px solid currentColor
+
+  &.upon-activation
+    &::after
+      transition width 400ms ease-out 400ms
+      width 0
+    .bespoke-active &
+      &::after
+        width 100%
+
+.jump
+  &.upon-activation
+    display inline-block
+    transition all 200ms cubic-bezier(0, 0, 0.27, 1.58) 700ms
+    opacity 0
+    transform scale(.2) translateY(50%)
+    .bespoke-active &
+      opacity 1
+      transform scale(.6) translateY(0%)
+
+for d in 200 400 600 800 1000 1200 1400 1600 1800 2000 2200 2400 2600 2800 3000
+  .delay-{d}
+    &
+    &::before
+    &::after
+      animation-delay 1ms * d !important
+      transition-delay 1ms * d !important
+
+.shaking
+  animation shaking 500ms ease-out 0s 1
+  &:nth-child(2n)
+    animation-delay 100ms
+
+@keyframes shaking
+  0%
+    transform translate3d(4px, 0px, 0px)
+  10%
+    transform translate3d(-7px, -5px, 0px)
+  20%
+    transform translate3d(8px, 5px, 0px)
+  30%
+    transform translate3d(-7px, 3px, 0px)
+  40%
+    transform translate3d(9px, -3px, 0px)
+  50%
+    transform translate3d(-4px, 3px, 0px)
+  60%
+    transform translate3d(4px, -4px, 0px)
+  70%
+    transform translate3d(-5px, -4px, 0px)
+  80%
+    transform translate3d(4px, 2px, 0px)
+  90%
+    transform translate3d(-3px, -1px, 0px)
+  100%
+    transform translate3d(0px, 0px, 0px)
+
+
+.cool-rotation-x
+  animation cool-rotation-x 1200ms ease-in-out 0s infinite alternate
+
+@keyframes cool-rotation-x
+  0%
+    transform rotateX(-10deg)
+  100%
+    transform rotateX(10deg)
