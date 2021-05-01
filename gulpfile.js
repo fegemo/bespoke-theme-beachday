@@ -13,6 +13,7 @@ const rename = require('gulp-rename');
 const terser = require('gulp-terser');
 const connect = require('gulp-connect');
 const ghpages = require('gh-pages');
+const path = require('path')
 
 function cleanTask(cb) {
   del(['demo/dist', 'dist', 'lib/tmp'], cb);
